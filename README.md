@@ -116,8 +116,13 @@ Or use the provided requirements.txt:
 pip install -r requirements.txt
 ```
 
-## Usage
+Generate .exe-File
 
+```bash
+python -m PyInstaller --noconfirm --onefile --windowed --icon=icon.ico noise_manager.py
+```
+
+## Usaga
 ### GUI Mode
 ```bash
 python audio_processor.py
@@ -176,39 +181,15 @@ Uses adaptive spectral gating with configurable Butterworth filtering:
 - Optional band-pass filtering
 
 ### Noise Addition Methods
-
-**FGSM (additive_adversarial)**
-```
-noise = epsilon × sign(∇audio)
-```
-
-**PGD (pgd)**
-```
-Iterative gradient-based optimization
-Bounded perturbation within epsilon ball
-```
-
-**Spatial (spatial)**
-```
-Combined pitch shifting + time warping
-Perceptually similar, digitally different
-```
+- **FGSM (additive_adversarial)
+- **PGD (pgd)**
+- **Spatial (spatial)**
 
 ### Audio Statistics
 - **LUFS**: Integrated loudness (EBU R128)
 - **Peak Level**: Maximum sample value
 - **RMS**: Root mean square energy
 - **Dynamic Range**: Difference between peaks and average
-
-## File Structure
-```
-audio-processor/
-├── audio_processor.py       # Main application
-├── Start_Screen.png         # Splash screen image
-├── output/                  # Processed audio files
-├── plots/                   # Generated spectrograms
-└── stats/                   # Processing statistics
-```
 
 ## Export Options
 
