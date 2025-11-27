@@ -1,0 +1,14 @@
+numpy
+soundfile
+matplotlib
+librosa
+pyloudnorm
+scipy
+deepfilternet
+torch
+demucs
+pydub
+Pillow
+tk
+spleeter
+asteroid
